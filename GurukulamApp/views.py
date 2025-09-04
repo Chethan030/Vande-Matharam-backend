@@ -1,6 +1,5 @@
 from django.shortcuts import render
-
-# Create your views here.
+from django.http import HttpResponse
 from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 from .models import *
@@ -13,3 +12,7 @@ class BgNameViews(ModelViewSet):
 class BgimagesUploadView(ModelViewSet):
     queryset=BgImages.objects.all()
     serializer_class=BgimagesSerial
+
+def home(request):
+    return HttpResponse('hii')
+
