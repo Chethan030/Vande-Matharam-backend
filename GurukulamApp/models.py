@@ -14,4 +14,11 @@ class BgImages(models.Model):
 
     def __str__(self):
         return self.bgname.name
+class News(models.Model):
+    news_name=models.CharField(max_length=60)
+    image=models.ImageField(upload_to='news_images')
+    description=models.TextField()
+    date=models.DateField(auto_created=False)
     
+    def __str__(self):
+        return self.news_name
