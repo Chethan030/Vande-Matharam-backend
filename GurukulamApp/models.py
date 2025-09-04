@@ -1,3 +1,17 @@
 from django.db import models
 
 # Create your models here.
+
+
+class Bgname(models.Model):
+    name=models.CharField(max_length=30)
+    def __str__(self):
+        return self.name
+    
+class BgImages(models.Model):
+    bgname=models.OneToOneField(Bgname,on_delete=models.CASCADE,related_name='bg_images_for_each')
+    image=models.ImageField(upload_to='bg-images')
+
+    def __str__(self):
+        return self.bgname.name
+    
