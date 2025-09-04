@@ -39,3 +39,9 @@ class AdrishyaGalleryImages(models.Model):
     date=models.DateField(auto_now_add=False)
     
 
+class SteeringTeam(models.Model):
+    name=models.CharField(max_length=70)
+    image=models.ImageField(upload_to='steeringBoardTeam')
+
+    def __str__(self):
+        return self.name

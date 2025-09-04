@@ -29,3 +29,6 @@ class AdrishyaGalleryViews(ModelViewSet):
     queryset=AdrishyaGalleryImages.objects.all()
     serializer_class=AdrishyaGallerySerial
 
+class SteeringBoardTeamViews(ModelViewSet):
+    queryset=SteeringTeam.objects.all()
+    serializer_class=SteeringBoardTeamSerial
