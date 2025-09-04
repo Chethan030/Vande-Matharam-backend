@@ -20,3 +20,7 @@ class NewsView(ModelViewSet):
 class GurukulamActivityViews(ModelViewSet):
     queryset=GurukulamActivities.objects.all()
     serializer_class=GurukulamActSerial
+
+class GurukulamGalleryViews(ModelViewSet):
+    queryset=GurukulamGallery.objects.all()
+    serializer_class=GurukulamGallerySerial
