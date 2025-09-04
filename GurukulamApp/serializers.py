@@ -37,4 +37,9 @@ class SteeringBoardTeamSerial(serializers.ModelSerializer):
         model=SteeringTeam
         fields='__all__'
         
-        
+class TeamSerial(serializers.ModelSerializer):
+    class Meta:
+        model=Team
+        fields='__all__'
+
+
