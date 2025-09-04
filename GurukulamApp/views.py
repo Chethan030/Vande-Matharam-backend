@@ -21,7 +21,11 @@ class GurukulamActivityViews(ModelViewSet):
     queryset=GurukulamActivities.objects.all()
     serializer_class=GurukulamActSerial
 
+class GurukulamGalleryViews(ModelViewSet):
+    queryset=GurukulamGallery.objects.all()
+    serializer_class=GurukulamGallerySerial
+
 class AdrishyaGalleryViews(ModelViewSet):
     queryset=AdrishyaGalleryImages.objects.all()
     serializer_class=AdrishyaGallerySerial
-    
+

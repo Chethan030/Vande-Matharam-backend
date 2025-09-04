@@ -27,5 +27,9 @@ class AdrishyaGallerySerial(serializers.ModelSerializer):
         model=AdrishyaGalleryImages
         fields=['id','image','date']
     
-
+class GurukulamGallerySerial(serializers.ModelSerializer):
+    class Meta:
+        model=GurukulamGallery
+        fields=['id','date','images']
+        
         
