@@ -31,5 +31,10 @@ class GurukulamGallerySerial(serializers.ModelSerializer):
     class Meta:
         model=GurukulamGallery
         fields=['id','date','images']
+
+class SteeringBoardTeamSerial(serializers.ModelSerializer):
+    class Meta:
+        model=SteeringTeam
+        fields='__all__'
         
         
