@@ -1,7 +1,10 @@
-from django.urls import path 
 
+from django.urls import path
 from .views import *
+from rest_framework.routers import DefaultRouter
 
-urlpatterns=[
-    path('',home,name='home')
-]
+router=DefaultRouter()
+router.register(r'bg_name',BgNameViews)
+router.register(r'bg_images',BgimagesUploadView)
+
+urlpatterns=router.urls
