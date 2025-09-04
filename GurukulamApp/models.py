@@ -33,3 +33,9 @@ class GurukulamGallery(models.Model):
     images=models.ImageField(upload_to="images_gurukulam_gallery")
     date=models.DateField(auto_created=False)
     
+
+class AdrishyaGalleryImages(models.Model):
+    image=models.ImageField(upload_to='AdrishyaGallery')
+    date=models.DateField(auto_now_add=False)
+    
+
