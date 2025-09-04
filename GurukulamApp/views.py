@@ -13,5 +13,6 @@ class BgimagesUploadView(ModelViewSet):
     queryset=BgImages.objects.all()
     serializer_class=BgimagesSerial
 
-
-
+class NewsView(ModelViewSet):
+    queryset=News.objects.all()
+    serializer_class=NewsSerial
