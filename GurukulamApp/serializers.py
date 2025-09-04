@@ -32,4 +32,9 @@ class GurukulamGallerySerial(serializers.ModelSerializer):
         model=GurukulamGallery
         fields=['id','date','images']
         
-        
+class TeamSerial(serializers.ModelSerializer):
+    class Meta:
+        model=Team
+        fields='__all__'
+
+

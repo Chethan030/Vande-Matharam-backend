@@ -29,3 +29,7 @@ class AdrishyaGalleryViews(ModelViewSet):
     queryset=AdrishyaGalleryImages.objects.all()
     serializer_class=AdrishyaGallerySerial
 
+class TeamViews(ModelViewSet):
+    queryset=Team.objects.all()
+    serializer_class=TeamSerial
+

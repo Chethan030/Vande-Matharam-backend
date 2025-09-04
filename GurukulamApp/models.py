@@ -38,4 +38,11 @@ class AdrishyaGalleryImages(models.Model):
     image=models.ImageField(upload_to='AdrishyaGallery')
     date=models.DateField(auto_now_add=False)
     
-
+class Team(models.Model):
+    name=models.CharField(max_length=80)
+    designation=models.TextField()
+    des=models.TextField()
+    image=models.ImageField(upload_to='team_images')
+    
+    def __str__(self):
+        return self.name

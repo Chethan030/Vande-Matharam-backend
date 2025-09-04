@@ -10,6 +10,7 @@ router.register(r'news',NewsView)
 router.register(r'gukulam_activities',GurukulamActivityViews)
 router.register(r'gallery/gurukulam',GurukulamGalleryViews)
 router.register(r'gallery/adrishya',AdrishyaGalleryViews)
+router.register(r'team',TeamViews)
 
 
 urlpatterns=router.urls
