@@ -11,6 +11,7 @@ class BgImages(models.Model):
 
     def __str__(self):
         return self.bgname.name
+
 class News(models.Model):
     news_name=models.CharField(max_length=60)
     image=models.ImageField(upload_to='news_images')
@@ -19,4 +20,11 @@ class News(models.Model):
 
     def __str__(self):
         return self.news_name
-    
+
+class GurukulamActivities(models.Model):
+    title=models.CharField(max_length=60)
+    image=models.ImageField(upload_to='gurukulam_activities')
+    des=models.TextField()
+
+    def __str__(self):
+        return self.title

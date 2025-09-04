@@ -16,6 +16,11 @@ class NewsSerial(serializers.ModelSerializer):
     class Meta:
         model=News
         fields='__all__'
+
+class GurukulamActSerial(serializers.ModelSerializer):
+    class Meta:
+        model=GurukulamActivities
+        fields='__all__'
     
 
         

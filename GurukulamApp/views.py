@@ -16,3 +16,7 @@ class BgimagesUploadView(ModelViewSet):
 class NewsView(ModelViewSet):
     queryset=News.objects.all()
     serializer_class=NewsSerial
+
+class GurukulamActivityViews(ModelViewSet):
+    queryset=GurukulamActivities.objects.all()
+    serializer_class=GurukulamActSerial
