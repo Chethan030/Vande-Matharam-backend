@@ -15,3 +15,6 @@ class BgImages(models.Model):
     def __str__(self):
         return self.bgname.name
     
+
+
+    
