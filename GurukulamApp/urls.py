@@ -7,5 +7,6 @@ router=DefaultRouter()
 router.register(r'bg_name',BgNameViews)
 router.register(r'bg_images',BgimagesUploadView)
 router.register(r'news',NewsView)
+router.register(r'gukulam_activities',GurukulamActivityViews)
 
 urlpatterns=router.urls
