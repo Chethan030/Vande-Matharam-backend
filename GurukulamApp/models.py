@@ -28,3 +28,8 @@ class GurukulamActivities(models.Model):
 
     def __str__(self):
         return self.title
+    
+class AdrishyaGalleryImages(models.Model):
+    image=models.ImageField(upload_to='AdrishyaGallery')
+    date=models.DateField(auto_now_add=False)
+    

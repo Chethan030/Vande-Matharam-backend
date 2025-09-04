@@ -21,6 +21,11 @@ class GurukulamActSerial(serializers.ModelSerializer):
     class Meta:
         model=GurukulamActivities
         fields='__all__'
+
+class AdrishyaGallerySerial(serializers.ModelSerializer):
+    class Meta:
+        model=AdrishyaGalleryImages
+        fields=['id','image','date']
     
 
         
