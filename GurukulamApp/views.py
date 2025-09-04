@@ -13,6 +13,5 @@ class BgimagesUploadView(ModelViewSet):
     queryset=BgImages.objects.all()
     serializer_class=BgimagesSerial
 
-def home(request):
-    return HttpResponse('hii')
+
 
