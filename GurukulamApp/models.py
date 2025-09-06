@@ -54,3 +54,18 @@ class SteeringTeam(models.Model):
 
     def __str__(self):
         return self.name
+
+class AdrishtyActivities(models.Model):
+    title=models.CharField(max_length=60)
+    des=models.TextField()
+
+
+    def __str__(self):
+        return self.title
+    
+class AdrishyaActImages(models.Model):
+    adrishya=models.ForeignKey(AdrishtyActivities,on_delete=models.CASCADE,related_name='adrishyaactivities_images')
+    images=models.ImageField(upload_to='adrishya/activities')
+    
+    def __str__(self):
+        return  self.adrishya.title

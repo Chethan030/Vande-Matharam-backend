@@ -42,4 +42,24 @@ class TeamSerial(serializers.ModelSerializer):
         model=Team
         fields='__all__'
 
+class AdrishyaActImagesSerial(serializers.ModelSerializer):
+    class Meta:
+        model=AdrishyaActImages
+        fields=['adrishya','images']
+
+class ActivitiesesAdrishyaSerial(serializers.ModelSerializer):
+    image=serializers.SerializerMethodField(read_only=True)
+    class Meta:
+        model=AdrishtyActivities
+        fields=['id','title','des','image']
+    
+    def get_image(self,obj):
+        if obj.adrishyaactivities_images:
+            serializers_data=AdrishyaActImagesSerial(obj.adrishyaactivities_images.all(),many=True,context=self.context).data
+            images=[item['images'] for item in serializers_data]
+            return images
+        return 'no'
+
+
+
 

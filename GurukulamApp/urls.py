@@ -12,6 +12,8 @@ router.register(r'gallery/gurukulam',GurukulamGalleryViews)
 router.register(r'gallery/adrishya',AdrishyaGalleryViews)
 router.register(r'team',TeamViews)
 router.register(r'team/steeringboard-team',SteeringBoardTeamViews)
+router.register(r'adrishya/activities',AdrishyaActView)
+router.register(r'adrishya/image',AdrishyaActimageViews)
 
 
 

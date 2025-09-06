@@ -39,3 +39,12 @@ class SteeringBoardTeamViews(ModelViewSet):
     queryset=SteeringTeam.objects.all()
     serializer_class=SteeringBoardTeamSerial
 
+class AdrishyaActView(ModelViewSet):
+    queryset=AdrishtyActivities.objects.all()
+    serializer_class=ActivitiesesAdrishyaSerial
+
+class AdrishyaActimageViews(ModelViewSet):
+    queryset=AdrishyaActImages.objects.all()
+    serializer_class=AdrishyaActImagesSerial
+
+
