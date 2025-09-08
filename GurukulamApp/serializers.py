@@ -58,7 +58,7 @@ class ActivitiesesAdrishyaSerial(serializers.ModelSerializer):
             serializers_data=AdrishyaActImagesSerial(obj.adrishyaactivities_images.all(),many=True,context=self.context).data
             images=[item['images'] for item in serializers_data]
             return images
-        return 'no'
+        return []
 
 
 
