@@ -1,5 +1,32 @@
 from django.db import models
 
+from django.contrib.auth.models import AbstractBaseUser,BaseUserManager,PermissionsMixin    
+
+class UserManager(BaseUserManager):
+    def create_user(self, email, password=None, role='staff'):
+        if not email:
+            raise ValueError("Users must have an email")
+        email = self.normalize_email(email)
+        user = self.model(email=email, role=role)
+        user.set_password(password)
+        user.save()
+        return user
+
+    def create_superuser(self, email, password):
+        return self.create_user(email, password, role='admin')
+
+class Users(AbstractBaseUser, PermissionsMixin):
+    ROLE_CHOICES = (('admin', 'Admin'),('staff','Staff'))
+    email = models.EmailField(unique=True)
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES)
+    is_active = models.BooleanField(default=True)
+    is_staff=models.BooleanField(default=True)
+    objects = UserManager()
+    USERNAME_FIELD = 'email'
+
+    def _str_(self):
+        return f"{self.email} ({self.role})"
+    
 class Bgname(models.Model):
     name=models.CharField(max_length=30)
     def __str__(self):
