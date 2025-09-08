@@ -9,7 +9,7 @@ from .permissions import *
 class UserViews(ModelViewSet):
     queryset=Users.objects.all()
     serializer_class=UserSerial
-    permission_classes=[IsAdminOrReadOnly]
+    permission_classes=[IsAdmin]
 
 class BgNameViews(ModelViewSet):
     queryset=Bgname.objects.all()

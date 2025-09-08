@@ -5,11 +5,6 @@ from rest_framework.permissions import BasePermission
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 class IsAdminOrReadOnly(BasePermission):
-    """
-    - Anyone (including unauthenticated users) can do safe methods (GET, HEAD, OPTIONS).
-    - Only authenticated users with role 'admin' can perform write operations (POST, PUT, DELETE).
-    """
-
     def has_permission(self, request, view):
         # Allow safe methods (GET, HEAD, OPTIONS) for everyone
         if request.method in SAFE_METHODS:
@@ -20,3 +15,7 @@ class IsAdminOrReadOnly(BasePermission):
             request.user.is_authenticated 
             and getattr(request.user, "role", None) == "admin"
         )
+
+class IsAdmin(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role=='admin'
