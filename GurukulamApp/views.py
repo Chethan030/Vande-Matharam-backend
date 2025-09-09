@@ -63,4 +63,8 @@ class AdrishyaActimageViews(ModelViewSet):
     serializer_class=AdrishyaActImagesSerial
     permission_classes=[IsAdminOrReadOnly]
 
+class HomeActViews(ModelViewSet):
+    queryset=HomepageActivites.objects.all()
+    serializer_class=homeActSerial
+    permission_classes=[IsAdminOrReadOnly]
 
