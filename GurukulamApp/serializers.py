@@ -72,6 +72,10 @@ class ActivitiesesAdrishyaSerial(serializers.ModelSerializer):
             return images
         return []
 
+class homeActSerial(serializers.ModelSerializer):
+    class Meta:
+        model=HomepageActivites
+        fields='__all__'
 
 
 

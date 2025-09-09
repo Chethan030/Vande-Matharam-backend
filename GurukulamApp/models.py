@@ -96,3 +96,11 @@ class AdrishyaActImages(models.Model):
     
     def __str__(self):
         return  self.adrishya.title
+    
+class HomepageActivites(models.Model):
+    tittle=models.CharField(max_length=70)
+    des=models.TextField()
+    image=models.ImageField(upload_to='activites_image')
+
+    def __str__(self):
+        return self.tittle
