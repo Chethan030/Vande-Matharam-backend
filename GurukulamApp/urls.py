@@ -2,7 +2,7 @@
 from django.urls import path
 from .views import *
 from rest_framework.routers import DefaultRouter
-
+from rest_framework_simplejwt.views import TokenObtainPairView
 router=DefaultRouter()
 
 router.register(r'users',UserViews)
@@ -19,4 +19,6 @@ router.register(r'adrishya/image',AdrishyaActimageViews)
 
 
 
-urlpatterns=router.urls
+urlpatterns=[
+    path('token/',TokenObtainPairView.as_view())
+]+router.urls
