@@ -13,15 +13,7 @@ class UserSerial(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
         return user
-class BgNamesSerial(serializers.ModelSerializer):
-    class Meta:
-        model=Bgname
-        fields='__all__'
 
-class BgimagesSerial(serializers.ModelSerializer):
-    class Meta:
-        model=BgImages
-        fields='__all__'
         
         
 class NewsSerial(serializers.ModelSerializer):

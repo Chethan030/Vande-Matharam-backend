@@ -27,18 +27,6 @@ class Users(AbstractBaseUser, PermissionsMixin):
     def _str_(self):
         return f"{self.email} ({self.role})"
     
-class Bgname(models.Model):
-    name=models.CharField(max_length=30)
-    def __str__(self):
-        return self.name
-    
-class BgImages(models.Model):
-    bgname=models.OneToOneField(Bgname,on_delete=models.CASCADE,related_name='bg_images_for_each')
-    image=models.ImageField(upload_to='bg-images')
-
-    def __str__(self):
-        return self.bgname.name
-
 class News(models.Model):
     news_name=models.CharField(max_length=60)
     image=models.ImageField(upload_to='news_images')

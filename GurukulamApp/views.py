@@ -11,15 +11,6 @@ class UserViews(ModelViewSet):
     serializer_class=UserSerial
     permission_classes=[IsAdmin]
 
-class BgNameViews(ModelViewSet):
-    queryset=Bgname.objects.all()
-    serializer_class=BgNamesSerial
-    permission_classes=[IsAdminOrReadOnly]
-
-class BgimagesUploadView(ModelViewSet):
-    queryset=BgImages.objects.all()
-    serializer_class=BgimagesSerial
-    permission_classes=[IsAdminOrReadOnly]
 
 class NewsView(ModelViewSet):
     queryset=News.objects.all()

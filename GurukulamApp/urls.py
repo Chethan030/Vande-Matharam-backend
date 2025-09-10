@@ -6,8 +6,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 router=DefaultRouter()
 
 router.register(r'users',UserViews)
-router.register(r'bg_name',BgNameViews)
-router.register(r'bg_images',BgimagesUploadView)
 router.register(r'home/act',HomeActViews)
 router.register(r'news',NewsView)
 router.register(r'gukulam_activities',GurukulamActivityViews)
